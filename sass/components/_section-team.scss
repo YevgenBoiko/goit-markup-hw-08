@@ -1,0 +1,72 @@
+.our-team {
+  @extend %section;
+  background-color: $section-bgc;
+
+  margin-bottom: 0;
+}
+
+.our-team__title {
+  @extend %section-title;
+}
+.our-team__list {
+  @extend %list;
+}
+.our-team__item {
+  background-color: $primary-whyte-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.our-team__card {
+  padding: 30px 32px;
+}
+.our-team__card-title {
+  color: $primary-text-color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.our-team__position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.social-networks {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.social-networks__link {
+  fill: $main-logo-color;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms $timing-function, fill 250ms $timing-function;
+  &:hover,
+  &:focus {
+    fill: $primary-whyte-color;
+    background-color: $accent-color;
+    border-radius: 50%;
+  }
+}
+.social-networks__icon {
+  display: block;
+}
