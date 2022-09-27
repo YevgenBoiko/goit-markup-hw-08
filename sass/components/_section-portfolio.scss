@@ -1,20 +1,46 @@
 .portfolio {
   @extend %section;
+  border-top: 1px solid #ececec;
 }
 .portfolio__label {
   @extend %visually-hidden;
 }
 .portfolio__list {
   display: flex;
-  justify-content: center;
 
+  flex-wrap: wrap;
   @extend %list;
 
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and(min-width: 768px) {
+    width: 575px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
-.portfolio__item:not(:last-child) {
-  margin-right: 8px;
+.portfolio__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: 469px) and (max-width: 767px) {
+    &:nth-child(3n) {
+      margin-right: 20px;
+    }
+  }
 }
+
 .portfolio__button {
   @extend %button;
   background: $section-bgc;
@@ -38,23 +64,34 @@
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
+
+  @media screen and (max-width: 358px) {
+    padding: 6px 15px;
+  }
 }
+
 .card {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
 
-  margin-right: calc(-1 * $card-set-gap);
-  margin-bottom: calc(-1 * $card-set-gap);
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .card__item {
-  margin-right: $card-set-gap;
-  margin-bottom: $card-set-gap;
-
-  flex-basis: calc(100% / 3 - 30px);
+  @media screen and(min-width: 768px) {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+  @media screen and(min-width: 1200px) {
+    width: calc((100% - 90px) / 3);
+  }
 }
-
+.card__item:not(:last-child) {
+  margin-bottom: $card-set-gap;
+}
 .card__link {
   text-decoration: none;
   color: $secondary-text-color;
@@ -82,7 +119,10 @@
 
 .card__img {
   display: block;
+
   margin: 0;
+
+  width: 100%;
 }
 
 .card__back-text {
@@ -97,12 +137,19 @@
   transform: translateY(101%);
   transition: transform 250ms $timing-function;
 
-  padding: 63px 24px;
+  padding: 77px 24px;
   margin: 0;
   font-size: 18px;
   line-height: 28px;
   color: $primary-whyte-color;
   background-color: rgba(33, 150, 243, 0.9);
+
+  @media screen and(min-width: 768px) {
+    padding: 49px 24px;
+  }
+  @media screen and(min-width: 1200px) {
+    padding: 63px 24px;
+  }
 }
 
 .card__caption {
@@ -110,6 +157,11 @@
   padding: 20px 24px;
 }
 
+.card__caption--padding {
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 56px;
+  }
+}
 .card__title {
   color: $primary-text-color;
   font-weight: 700;

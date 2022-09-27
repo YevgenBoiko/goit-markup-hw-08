@@ -22,38 +22,72 @@
   <body>
     <!--Header-->
     <header class="header">
-      <div class="header__container">
-        <a class="logo" href="./index.html"><span class="logo-web">Web</span>Studio </a>
-        <nav class="nav nav--indent">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="./index.html">Студія</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link nav__link--current"> Портфоліо</a>
-            </li>
-            <li class="nav__item"><a href="" class="nav__link"> Контакти</a></li>
-          </ul>
-        </nav>
+      <div class="container">
+        <nav class="nav">
+          <a class="logo" href="./index.html"><span class="logo__web">Web</span>Studio </a>
 
-        <ul class="auth-nav auth-nav--indent">
-          <li class="auth-nav__item">
-            <a class="link auth-nav__link" href="mailto:info@devstudio.com"
-              ><svg class="auth-nav__icon" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link nav__link--current"> Портфоліо</a>
+              </li>
+              <li class="nav__item"><a href="" class="nav__link"> Контакти</a></li>
+            </ul>
+
+            <ul class="auth-nav auth-nav--indent">
+              <li class="auth-nav__item">
+                <a class="auth-nav__link auth-nav__link--mail" href="mailto:info@devstudio.com"
+                  ><svg class="auth-nav__icon auth-nav__icon--envelope" width="16px" height="12px">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="auth-nav__item">
+                <a class="auth-nav__link auth-nav__link--tel" href="tel:+380961111111"
+                  ><svg class="auth-nav__icon auth-nav__icon--phone" width="10px" height="16px">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="menu-socials">
+              <li class="menu-socials__item">
+                <a href="" class="menu-socials__text">Instagram</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="" class="menu-socials__text">Twitter</a>
+              </li>
+              <li class="menu-socials__item">
+                <a href="" class="menu-socials__text">Facebook</a>
+              </li>
+              <li class="menu-socials__item">
+                <a class="menu-socials__text" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="nav__button"
+            aria-controls="menu-container"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class="nav__icon"
+              width="40px"
+              height="40px"
+              aria-label="Перемикач мобільного меню"
             >
-          </li>
-          <li class="auth-nav__item">
-            <a class="link auth-nav__link" href="tel:+380961111111"
-              ><svg class="auth-nav__icon" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+              <use class="nav__icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="nav__icon-cross" href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </nav>
       </div>
     </header>
     <main>
@@ -72,7 +106,9 @@
               <button class="portfolio__button" type="button">Додатки</button>
             </li>
             <li class="portfolio__item">
-              <button class="portfolio__button" type="button">Дизайн</button>
+              <button class="portfolio__button portfolio__button--new-row" type="button">
+                Дизайн
+              </button>
             </li>
             <li class="portfolio__item">
               <button class="portfolio__button" type="button">Маркетинг</button>
@@ -83,11 +119,15 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port1.jpg    1x,
+                      ./images/portfolio_img/port1-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port1.jpg"
                     alt="Лептоп"
+                    class="card__img"
                     width="370"
                     height="294"
-                    class="card__img"
                   />
                   <p class="card__back-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -96,7 +136,7 @@
                   </p>
                 </div>
 
-                <div class="card__caption">
+                <div class="card__caption card__caption--padding">
                   <h2 class="card__title">Технокряк</h2>
                   <p class="card__text">Веб-сайт</p>
                 </div>
@@ -106,6 +146,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port2.jpg    1x,
+                      ./images/portfolio_img/port2-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port2.jpg"
                     alt="Постер New Orlean"
                     width="370"
@@ -128,6 +172,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port3.jpg    1x,
+                      ./images/portfolio_img/port3-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port3.jpg"
                     alt="Seafood ресторан"
                     height="294"
@@ -150,6 +198,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port4.jpg    1x,
+                      ./images/portfolio_img/port4-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port4.jpg"
                     alt="Навушники"
                     width="370"
@@ -172,6 +224,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port5.jpg    1x,
+                      ./images/portfolio_img/port5-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port5.jpg"
                     alt="Дві коробки"
                     width="370"
@@ -194,6 +250,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port6.jpg    1x,
+                      ./images/portfolio_img/port6-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port6.jpg"
                     alt="компʼютер"
                     width="370"
@@ -216,6 +276,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port7.jpg    1x,
+                      ./images/portfolio_img/port7-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port7.jpg"
                     alt="Журнал"
                     width="370"
@@ -238,6 +302,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port8.jpg    1x,
+                      ./images/portfolio_img/port8-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port8.jpg"
                     alt="Бірка"
                     width="370"
@@ -260,6 +328,10 @@
               <a class="card__link" href="">
                 <div class="card__icon">
                   <img
+                    srcset="
+                      ./images/portfolio_img/port9.jpg    1x,
+                      ./images/portfolio_img/port9-2x.jpg 2x
+                    "
                     src="./images/portfolio_img/port9.jpg"
                     alt="Ноутбук"
                     width="370"
@@ -284,10 +356,10 @@
     </main>
     <!--Footer-->
     <footer class="footer">
-      <div class="footer__container">
+      <div class="container footer__container">
         <div class="contacts">
           <a class="logo logo--white" href="./index.html"
-            ><span class="logo-web">Web</span>Studio</a
+            ><span class="logo__web">Web</span>Studio</a
           >
 
           <address class="contacts__address">
@@ -315,7 +387,7 @@
         <div class="find-us">
           <p class="footer-title">Приєднуйтесь</p>
           <ul class="social-networks">
-            <li class="social-networks__item">
+            <li class="social-networks__item social-networks__item--padding">
               <a class="social-networks__link social-networks__link--bgc" href="">
                 <svg
                   class="social-networks__icon social-networks__icon--color"
@@ -376,5 +448,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

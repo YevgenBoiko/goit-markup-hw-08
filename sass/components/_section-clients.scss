@@ -7,17 +7,28 @@
 }
 .clients__list {
   list-style: none;
-  display: flex;
-  gap: 30px;
+  margin: -15px;
   padding: 0;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
+.clients__item {
+  margin: 15px;
+  width: calc((100% - 2 * 30px) / 2);
 
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 90px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - (12 * 15px)) / 6);
+  }
+}
 .clients-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+
   height: 92px;
   color: $main-logo-color;
   border: 1px solid $main-logo-color;

@@ -1,32 +1,95 @@
 .hero {
   background-color: #c4c4c4;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/mainbg.jpg);
+    url(../images/mobile-bgi.jpg);
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover;
 
   background-position: center;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+  height: 400px;
+
+  @media screen and(min-width: 1200px) {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+@media screen and(min-device-pixel-ratio: 2),
+  screen and(-webkit-min-device-pixel-ratio: 2),
+  screen and(-o-min-device-pixel-ratio: 2),
+  screen and(min-resolution:192dpi),
+  screen and(min-resolution:2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/mobile-bgi-2x.jpg);
+  }
+}
+
+@media screen and(min-width:480px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/tablet-bgi.jpg);
+  }
+
+  @media screen and(min-device-pixel-ratio: 2),
+    screen and(-webkit-min-device-pixel-ratio: 2),
+    screen and(-o-min-device-pixel-ratio: 2),
+    screen and(min-resolution:192dpi),
+    screen and(min-resolution:2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/tablet-bgi-2x.jpg);
+    }
+  }
+}
+
+@media screen and(min-width:768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/desktop-bgi.jpg);
+  }
+
+  @media screen and(min-device-pixel-ratio: 2),
+    screen and(-webkit-min-device-pixel-ratio: 2),
+    screen and(-o-min-device-pixel-ratio: 2),
+    screen and(min-resolution:192dpi),
+    screen and(min-resolution:2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/desktop-bgi-2x.jpg);
+    }
+  }
 }
 
 .hero__title {
   color: $primary-whyte-color;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
-  width: 700px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and(min-width: 1200px) {
+    max-width: 696px;
+
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 /* button */
 
@@ -42,7 +105,7 @@
   border: none;
 
   letter-spacing: 0.06em;
-  padding: 10px 32px;
+  padding: 10px 24px;
 
   transition: background-color 250ms $timing-function;
   &:hover,
@@ -50,5 +113,9 @@
     background-color: $button-bgc;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    padding: 10px 32px;
   }
 }

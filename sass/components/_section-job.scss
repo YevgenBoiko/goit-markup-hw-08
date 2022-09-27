@@ -1,4 +1,7 @@
 .our-job {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
   @extend %section;
 
   padding-top: 0;
@@ -9,6 +12,7 @@
 }
 .our-job__list {
   @extend %list;
+  display: flex;
   margin-right: -30px;
 }
 .our-job__item {
