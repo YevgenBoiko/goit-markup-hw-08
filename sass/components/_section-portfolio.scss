@@ -1,6 +1,5 @@
 .portfolio {
   @extend %section;
-  border-top: 1px solid #ececec;
 }
 .portfolio__label {
   @extend %visually-hidden;
@@ -154,6 +153,7 @@
 
 .card__caption {
   border: 1px solid #eeeeee;
+  border-top: none;
   padding: 20px 24px;
 }
 

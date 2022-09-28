@@ -87,6 +87,10 @@
   color: $primary-whyte-color;
   margin-bottom: 20px;
   margin-top: 0;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .social-networks__item--padding {
